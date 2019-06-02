@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<h1>Spring Boot - Demos</h1>
+<div>图片验证码和二维码</div>
+<div id="pic">
+    <div>
+        <img src="http://localhost:8080/imgCode/checkCode"/>
+        <img src="http://localhost:8080/qrcode/othersImg?content=laia,who pa who?" width="100px"/>
+        <img src="http://localhost:8080/qrcode/myImg" width="100px"/>
+        <img src="http://localhost:8080/qrcode/imgWithPic" width="100px"/>
+    </div>
+    <br/><br/>
+
+    <div>
+        <a href="/excel/output/0"><button>导出excel</button></a>
+        <br/>导入EXCEL
+        <form method="POST" action="/excel/upload/0" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
